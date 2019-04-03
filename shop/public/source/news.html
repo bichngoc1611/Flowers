@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Flower Shop</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles-home.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap/bootstrap.min.css">
+
+    <!-- Fonts -->
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--  -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!-- Styles -->
+
+</head>
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header id="header">
+            <!-- top-link -->
+            <section class="top-link clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="nav navbar-nav topmenu-contact pull-left">
+                                <li><i class="fa fa-phone"></i> <span>Hotline:01667854378</span></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right topmenu  hidden-xs hidden-sm">
+                                <li class="order-check"><a href=""><i class="fa fa-pencil-square-o"></i> Kiểm tra đơn hàng</a></li>
+                                <li class="order-cart"><a href="#"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                                <li class="account-login"><a href="#"><i class="fa fa-sign-language"></i> Đăng nhập </a></li>
+                                <li class="account-register"><a href="#"><i class="fa fa-key"></i> Đăng ký </a></li>
+                            </ul>
+                            <div class="show-mobile hidden-lg hidden-md">
+                                <div class="quick-user">
+                                    <div class="quickaccess-toggle">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <div class="inner-toggle">
+                                        <ul class="login links">
+                                            <li>
+                                                <a href=""><i class="fa fa-sign-in"></i> Đăng ký</a>
+                                            </li>
+                                            <li>
+                                                <a href=""><i class="fa fa-key"></i> Đăng nhập</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="quick-access">
+                                    <div class="quickaccess-toggle">
+                                        <i class="fa fa-list"></i>
+                                    </div>
+                                    <div class="inner-toggle">
+                                        <ul class="links">
+                                            <li><a id="mobile-wishlist-total" href="" class="wishlist"><i class="fa fa-pencil-square-o"></i> Kiểm tra đơn hàng</a></li>
+                                            <li><a href="" class="shoppingcart"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end top-link -->
+            <!-- header-content -->
+            <section class="header-content clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-12 col-sm-12 header-left text-center">
+                            <div class="logo">
+                                <a href="" title="">
+                                    <img alt="flowershop" src="./images/slide/logo.png" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-xs-12 col-sm-12 header-right">
+                            <div class="sale-policy clearfix hidden-sm hidden-xs">
+                                <ul class="clearfix">
+                                    <li class="shipping">
+                                        <i class="fa fa-truck"></i><span>
+                                            Giao hàng miễn phí
+                                        </span>
+                                    </li>
+                                    <li class="payment">
+                                        <i class="fa fa-money"></i><span>
+                                            Thanh toán linh hoạt
+                                        </span>
+                                    </li>
+                                    <li class="return">
+                                        <i class="fa fa-refresh"></i><span>
+                                            Trả hàng trong 30 ngày
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 col-sm-7 col-xs-12 top-search">
+                                    <div class="search-mobile hidden-md hidden-lg">
+                                        <div class="input-cat form-search clearfix">
+                                            <div class="form-search-controls  input-group">
+                                                <input type="text" name="search" id="txtsearch1" onblur="if(this.value==&#39;&#39;)this.value=&#39;Tìm kiếm...&#39;" onfocus="if(this.value==&#39;Tìm kiếm...&#39;)this.value=&#39;&#39;" value="Tìm kiếm...">
+                                                <span class="input-group-btn">
+                                                    <button class="btn btn-search" title="Search" type="button" id="btnsearch1" value="Search">
+                                                        <i class="fa fa-search"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="search hidden-sm hidden-xs">
+                                        <div class="input-cat form-search clearfix">
+                                            <div class="form-search-controls">
+                                                <input type="text" name="search" id="txtsearch" onblur="if(this.value==&#39;&#39;)this.value=&#39;Tìm kiếm...&#39;" onfocus="if(this.value==&#39;Tìm kiếm...&#39;)this.value=&#39;&#39;" value="Tìm kiếm...">
+                                                <div class="select-categories">
+                                                    <select name="lbgroup" id="lbgroup">
+                                                        <option value="0" selected="selected">Tất cả</option>
+                                                        <option class="option-1" value="135098">Hoa giỏ</option>
+                                                        <option class="option-1" value="135087">Hoa tình yêu</option>
+                                                        <option class="option-1" value="135088">Hoa lan</option>
+                                                        <option class="option-1" value="135088">Hoa tiệc cưới</option>
+                                                        <option class="option-1" value="135088">Hoa khai trương</option>
+
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-search" title="Search" type="button" id="btnsearch" value="Search">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-5 col-xs-12 top-cart">
+                                    <div class="cart">
+                                        <div class="heading">
+                                            <a href="">
+                                                <span class="icon">icon</span><span id="cart-total">
+                                                   thông tin
+                                               </span><i class="fa fa-arrow-right"></i>
+                                           </a>
+                                       </div>
+                                       <div class="box-cart-dropdown">
+                                        <div class="cart-empty ">
+                                            <div class="docs">Giỏ hàng trống!</div>
+                                            <a>Tiếp tục mua hàng</a>
+                                        </div>
+                                        <div class="box-cart-dropdown-block">
+                                            <div class="total">
+                                                Có <a href=""><span>1</span> sản phẩm</a>
+                                                trong giỏ.<br>
+                                            </div>
+                                            <ul>
+                                                <li class="clearfix">
+                                                    <figure class="image">
+                                                        <a href="">
+                                                            <img alt="A7" src="./assets/images/gio2.jpg" class="img-responsive">
+                                                        </a>
+                                                    </figure>
+                                                    <div class="name">
+                                                        <a href="">A11</a>
+                                                        <div>
+                                                            1 x <span class="price">
+                                                                680.000₫
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <span class="remove_link">
+                                                        <a href="javascript:void(0);" class="remove-cart" onclick="RemoveItemCard(121745,0)"><i class="fa fa-times-circle"></i></a>
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                            <div class="cart-payment">
+                                                <div class="amount">
+                                                    Tổng tiền: <strong>
+                                                        680.000₫
+                                                    </strong>
+                                                </div>
+                                                <div class="btn-payment">
+                                                    <a class="btn btn-default" href="">Đặt hàng &amp; Thanh toán</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end header-content -->
+        <!-- navbar -->
+        <section class="navigation-menu clearfix">
+            <div class="container">
+                <div class="menu-top">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="menu-cate menu-quick-select">
+                                <div class="menu-cate-title">
+                                    <span><i class="fa fa-th-list"></i><a href="">Danh mục sản phẩm</a></span>
+                                    <i class="fa fa-chevron-circle-down"></i>
+                                </div>
+                                <ul class="menu-cate-content">
+                                    <li>
+                                        <a href="">
+                                            <i class="icon-menu fa fa-tree"></i>
+                                            Hoa giỏ<span class="arrow-menu"><i class="fa fa-chevron-right "></i></span>
+                                        </a>
+
+                                    </li>
+
+                                    <li>
+                                        <a href="">
+                                            <i class="icon-menu fa fa-heart"></i>
+                                            Hoa tình yêu<span class="arrow-menu"><i class="fa fa-chevron-right "></i></span>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="icon-menu fa fa-snowflake-o"></i>
+                                            Hoa lan<span class="arrow-menu"><i class="fa fa-chevron-right "></i></span>
+                                        </a>
+
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="icon-menu fa fa-gift"></i>
+                                            Hoa tiệc cưới<span class="arrow-menu"><i class="fa fa-chevron-right "></i></span>
+                                        </a>                                                        
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="icon-menu fa fa-university"></i>
+                                            Hoa khai trương<span class="arrow-menu"><i class="fa fa-chevron-right "></i></span>
+                                        </a>                                                        
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-9 ">
+                            <nav class="navbar nav-menu">
+                                <div class="navbar-header">
+                                    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <nav id="mobile-menu" class="mobile-menu collapse navbar-collapse">
+                                    <ul class="menu nav navbar-nav"><li class="level0"><a class="" href="./trangchu.html"><span>Trang chủ</span></a></li>
+                                        <li class="level0"><a class="" href="gioithieu.html"><span>Giới thiệu</span></a></li>
+                                        <li class="level0"><a class="" href="./product_type.html"><span>Sản phẩm</span></a></li>
+                                        <li class="level0"><a class="" href="./news.html"><span>Cẩm nang</span></a></li>
+                                        <li class="level0"><a class="" href="./news.html"><span>Dịch vụ</span></a></li>
+                                        <li class="level0"><a class="" href="./contact.html"><span>Liên hệ</span></a></li>
+                                    </ul>
+                                </nav>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end navbar -->
+    </header>
+    <!-- end header -->
+
+    <!-- left-bar -->
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="menu-news">
+                    <h3><span>Tin mới nhất</span></h3>
+                    <ul class="level0">
+                        <li>
+                            <a href="./news">
+                                <i class="fa fa-random">Ý nghĩa các loài hoa</i>
+                            </a>
+                            <a href="./news">
+                                <i class="fa fa-random">Ý nghĩa các loài hoa</i>
+                            </a>
+                            <a href="./news">
+                                <i class="fa fa-random">Ý nghĩa các loài hoa</i>
+                            </a>
+                            <a href="./news">
+                                <i class="fa fa-random">Ý nghĩa các loài hoa</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="news-content">
+
+                </div>
+            </div>
+
+
+            <!-- main -->
+            <div class="container">
+                <div id="content" class="space-top-none">
+                    <div class="main-content">
+                        <div class="row">                        
+
+
+                            <div class="col-md-9">
+
+                                <div class="breadcrumb clearfix">
+                                    <ul>
+                                        <li itemtype="" itemscope="" class="home">
+                                            <a title="Đến trang chủ" href="" itemprop="url"><span itemprop="title">Trang chủ</span></a>
+                                        </li>
+                                        <li class="icon-li"><strong>Tin tức</strong> </li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="news-content">
+                                    <h1 class="title"><span>Tin tức</span></h1>
+                                    <div class="news-block clearfix">
+                                        <div class="news-item clearfix">
+                                            <div class="col-md-3 col-sm-4 col-xs-12 image">
+                                                <a href="">
+                                                    <img src="./images/product/bo2.jpg" class="img-responsive lazy-img" data-original="" alt="Trồng và chăm sóc Cẩm tú cầu" style="display: inline-block;">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-9 col-sm-8 col-xs-12 news-info ">
+                                                <h2 class="name"><a href="">Trồng và chăm sóc Cẩm tú cầu</a></h2>
+                                                <p class="date">23/03/2016</p>
+                                                <div class="desc"><div style="text-align: justify;"><span style="line-height: 1.42857; box-sizing: border-box;">Thuộc chi tú cầu có tên khoa học là Hydrangea, có nguồn gốc từ bản địa Đông Á và Châu Mỹ. Hoa thường có màu trắng khi ra hoa và trong quá trình phát triển tùy thuộc và nơi ở và độ PH mà cho ra hoa nhiều màu sắc khác nhau, tất cả bộ phận của cây chứa độc tố có thể gây ngộ độc ở người khi ăn phải. Và đế có được những bông hoa cẩm tú cầu được khỏe mạnh và cho ra những bông&nbsp;hoa đẹp bạn cần quan tâm và chăm sóc.</span></div></div>
+                                            </div>
+                                        </div>
+                                        <div class="news-item clearfix">
+                                            <div class="col-md-3 col-sm-4 col-xs-12 image">
+                                                <a href="h">
+                                                    <img src="./images/product/bo2.jpg" class="img-responsive lazy-img" data-original="" alt="Chăm sóc hoa lan" style="display: inline-block;">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-9 col-sm-8 col-xs-12 news-info ">
+                                                <h2 class="name"><a href="">Chăm sóc hoa lan</a></h2>
+                                                <p class="date">23/03/2016</p>
+                                                <div class="desc"><span style="line-height: 18.5714px; text-align: justify;">Khi chúng ta mua chậu phong lan về chơi hoặc được ai đó biếu tặng, sau khi hoa tàn thì thời gian sau cây cũng suy yếu dần, lá rụng, thân khô và từ đó về sau cây không ra hoa nữa, ...</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="news-item clearfix">
+                                            <div class="col-md-3 col-sm-4 col-xs-12 image">
+                                                <a href="">
+                                                    <img src="./images/product/bo2.jpg" class="img-responsive lazy-img" data-original="" alt="Bảo quản hoa cắt cành tươi lâu" style="display: inline-block;">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-9 col-sm-8 col-xs-12 news-info ">
+                                                <h2 class="name"><a href="">Bảo quản hoa cắt cành tươi lâu</a></h2>
+                                                <p class="date">23/03/2016</p>
+                                                <div class="desc"><span style="line-height: 18.5714px; text-align: justify;">Sau khi cắt khỏi cây, cành hoa mất nguồn nước và dinh dưỡng do giả hành cung cấp. Cạnh đó các vi sinh vật gây thối rữa bắt đầu phá hủy các mô dẫn ở vết cắt.</span></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <p>Copyright © 2019. All rights reserved. Design by Bích Ngọc </p>
+        </div>
+    </footer>                  
+
+
+</div>
+
+
+
+
+</body>
+<script type="text/javascript" src="./assets/js/menu.js"></script>
+</html>

@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Flower Shop</title>
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/styles-home.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+        <!-- <link rel="stylesheet" type="text/css" href="./assets/css/setting.css"> -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap/bootstrap.min.css">
+
+        <!-- Fonts -->
+         
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <!--  -->
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <!-- Styles -->
+        
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- header -->
+            <header id="header">
+                <!-- top-link -->
+               <section class="top-link clearfix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="nav navbar-nav topmenu-contact pull-left">
+                                    <li><i class="fa fa-phone"></i> <span>Hotline:01667854378</span></li>
+                                </ul>
+                                    <ul class="nav navbar-nav navbar-right topmenu  hidden-xs hidden-sm">
+                                        <li class="order-check"><a href=""><i class="fa fa-pencil-square-o"></i> Kiểm tra đơn hàng</a></li>
+                                        <li class="order-cart"><a href="#"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                                        <li class="account-login"><a href="#"><i class="fa fa-sign-in"></i> Đăng nhập </a></li>
+                                        <li class="account-register"><a href="#"><i class="fa fa-key"></i> Đăng ký </a></li>
+                                    </ul>
+                                <div class="show-mobile hidden-lg hidden-md">
+                                    <div class="quick-user">
+                                        <div class="quickaccess-toggle">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        <div class="inner-toggle">
+                                                <ul class="login links">
+                                                    <li>
+                                                        <a href=""><i class="fa fa-sign-in"></i> Đăng ký</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href=""><i class="fa fa-key"></i> Đăng nhập</a>
+                                                    </li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                    <div class="quick-access">
+                                        <div class="quickaccess-toggle">
+                                            <i class="fa fa-list"></i>
+                                        </div>
+                                        <div class="inner-toggle">
+                                            <ul class="links">
+                                                <li><a id="mobile-wishlist-total" href="" class="wishlist"><i class="fa fa-pencil-square-o"></i> Kiểm tra đơn hàng</a></li>
+                                                <li><a href="" class="shoppingcart"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                    <!-- end top-link -->
+                    <!-- header-content -->
+                <section class="header-content clearfix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-xs-12 col-sm-12 header-left text-center">
+                                <div class="logo">
+                                    <a href="" title="">
+                                        <img alt="flowershop" src="./images/slide/logo.png" class="img-responsive">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-9 col-xs-12 col-sm-12 header-right">
+                                <div class="sale-policy clearfix hidden-sm hidden-xs">
+                                    <ul class="clearfix">
+                                        <li class="shipping">
+                                            <i class="fa fa-truck"></i><span>
+                                                Giao hàng miễn phí
+                                            </span>
+                                        </li>
+                                        <li class="payment">
+                                            <i class="fa fa-money"></i><span>
+                                                Thanh toán linh hoạt
+                                            </span>
+                                        </li>
+                                        <li class="return">
+                                            <i class="fa fa-refresh"></i><span>
+                                                Trả hàng trong 30 ngày
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-7 col-xs-12 top-search">
+                                        <div class="search-mobile hidden-md hidden-lg">
+                                            <div class="input-cat form-search clearfix">
+                                                <div class="form-search-controls  input-group">
+                                                    <input type="text" name="search" id="txtsearch1" onblur="if(this.value==&#39;&#39;)this.value=&#39;Tìm kiếm...&#39;" onfocus="if(this.value==&#39;Tìm kiếm...&#39;)this.value=&#39;&#39;" value="Tìm kiếm...">
+                                                    <span class="input-group-btn">
+                                                        <button class="btn btn-search" title="Search" type="button" id="btnsearch1" value="Search">
+                                                            <i class="fa fa-search"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search hidden-sm hidden-xs">
+                                            <div class="input-cat form-search clearfix">
+                                                <div class="form-search-controls">
+                                                    <input type="text" name="search" id="txtsearch" onblur="if(this.value==&#39;&#39;)this.value=&#39;Tìm kiếm...&#39;" onfocus="if(this.value==&#39;Tìm kiếm...&#39;)this.value=&#39;&#39;" value="Tìm kiếm...">
+                                                    <div class="select-categories">
+                                                        <select name="lbgroup" id="lbgroup">
+                                                                    <option value="0" selected="selected">Tất cả</option>
+                                                                    <option class="option-1" value="135098">Hoa thiết kế</option>
+                                                                    <option class="option-1" value="135087">Hoa chủ đề</option>
+                                                                    <option class="option-1" value="135088">Hoa cưới hỏi</option>
+                                                                    
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-search" title="Search" type="button" id="btnsearch" value="Search">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-5 col-xs-12 top-cart">
+                                        <div class="cart">
+                                            <div class="heading">
+                                                <a href="">
+                                                    <span class="icon">icon</span><span id="cart-total">
+                                                       thông tin
+                                                    </span><i class="fa fa-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                                <div class="box-cart-dropdown">
+                                                    <div class="cart-empty ">
+                                                        <div class="docs">Giỏ hàng trống!</div>
+                                                        <a>Tiếp tục mua hàng</a>
+                                                    </div>
+                                                    <div class="box-cart-dropdown-block">
+                                                        <div class="total">
+                                                            Có <a href=""><span>1</span> sản phẩm</a>
+                                                            trong giỏ.<br>
+                                                        </div>
+                                                        <ul>
+                                                                <li class="clearfix">
+                                                                    <figure class="image">
+                                                                        <a href="">
+                                                                            <img alt="A7" src="./assets/images/gio2.jpg" class="img-responsive">
+                                                                        </a>
+                                                                    </figure>
+                                                                    <div class="name">
+                                                                        <a href="">A11</a>
+                                                                        <div>
+                                                                            1 x <span class="price">
+                                                                                680.000₫
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <span class="remove_link">
+                                                                        <a href="javascript:void(0);" class="remove-cart" onclick="RemoveItemCard(121745,0)"><i class="fa fa-times-circle"></i></a>
+                                                                    </span>
+                                                                </li>
+                                                        </ul>
+                                                        <div class="cart-payment">
+                                                            <div class="amount">
+                                                                Tổng tiền: <strong>
+                                                                    680.000₫
+                                                                </strong>
+                                                            </div>
+                                                            <div class="btn-payment">
+                                                                <a class="btn btn-default" href="">Đặt hàng &amp; Thanh toán</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                    <!-- end header-content -->
+                    <!-- navbar -->
+                <section class="navigation-menu clearfix">
+                    <div class="container">
+                        <div class="menu-top">
+                            <div class="row">
+                               
+                                <div class="col-md-9 ">
+                                    <nav class="navbar nav-menu">
+                                        <div class="navbar-header">
+                                            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+                                        <nav id="mobile-menu" class="mobile-menu collapse navbar-collapse">
+                                            <ul class="menu nav navbar-nav"><li class="level0"><a class="" href="trang-chu.html"><span>Trang chủ</span></a></li>
+                                                <li class="level0"><a class="" href=""><span>Giới thiệu</span></a></li>
+                                                <li class="level0"><a class="" href=""><span>Sản phẩm</span></a></li>
+                                                <li class="level0"><a class="" href=""><span>Cẩm nang</span></a></li>
+                                                <li class="level0"><a class="" href=""><span>Dịch vụ</span></a></li>
+                                                <li class="level0"><a class="" href=""><span>Liên hệ</span></a></li>
+                                                </ul>
+                                        </nav>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                    <!-- end navbar -->
+            </header>
+            <!-- end header -->
+
+            <!-- slideshow -->
+      
+    <div class="inner-header">
+        <div class="container">
+            <div class="pull-left">
+                <h6 class="inner-title">Product</h6>
+            </div>
+            <div class="pull-right">
+                <div class="beta-breadcrumb font-large">
+                    <a href="index.html">Home</a> / <span>Product</span>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="content">
+            <div class="row">
+                <div class="col-sm-9">
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="./images/product/binh3.jpg" alt="">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="single-item-body">
+                                <p class="single-item-title">Hoa bình</p>
+                                <p class="single-item-price">
+                                    <span>$34.55</span>
+                                </p>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="space20">&nbsp;</div>
+
+                            <div class="single-item-desc">
+                                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo ms id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe.</p>
+                            </div>
+                            <div class="space20">&nbsp;</div>
+                            
+                            <div class="single-item-options">
+                                
+                                <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space40">&nbsp;</div>
+                    <div class="woocommerce-tabs">
+                        <ul class="tabs">
+                            <li><a href="#tab-description">Description</a></li>
+                            <li><a href="#tab-reviews">Reviews (0)</a></li>
+                        </ul>
+
+                        <div class="panel" id="tab-description">
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+                            <p>Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequaturuis autem vel eum iure reprehenderit qui in ea voluptate velit es quam nihil molestiae consequr, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+                        </div>
+                        <div class="panel" id="tab-reviews">
+                            <p>No Reviews</p>
+                        </div>
+                    </div>
+                    <div class="space50">&nbsp;</div>
+                    <div class="beta-products-list">
+                        <h4>Related Products</h4>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="single-item">
+                                    <div class="single-item-header">
+                                        <a href="product.html"><img src="./images/product/cm4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="single-item-body">
+                                        <p class="single-item-title">Hoa chúc mừng</p>
+                                        <p class="single-item-price">
+                                            <span>$34.55</span>
+                                        </p>
+                                    </div>
+                                    <div class="single-item-caption">
+                                        <a class="add-to-cart pull-left" href="product.html"><i class="fa fa-shopping-cart"></i></a>
+                                        <a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="single-item">
+                                    <div class="single-item-header">
+                                        <a href="product.html"><img src="./images/product/kt5.jpg" alt=""></a>
+                                    </div>
+                                    <div class="single-item-body">
+                                        <p class="single-item-title">Hoa khai trương</p>
+                                        <p class="single-item-price">
+                                            <span>$34.55</span>
+                                        </p>
+                                    </div>
+                                    <div class="single-item-caption">
+                                        <a class="add-to-cart pull-left" href="product.html"><i class="fa fa-shopping-cart"></i></a>
+                                        <a class="beta-btn primary" href="product.html">Details <i class="fa fa-chevron-right"></i></a>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="single-item">
+                                    <div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
+
+                                    <div class="single-item-header">
+                                        <a href="#"><img src="./images/product/cb6.jpg" alt=""></a>
+                                    </div>
+                                    <div class="single-item-body">
+                                        <p class="single-item-title">Hoa chia buồn</p>
+                                        <p class="single-item-price">
+                                            <span class="flash-del">$34.55</span>
+                                            <span class="flash-sale">$33.55</span>
+                                        </p>
+                                    </div>
+                                    <div class="single-item-caption">
+                                        <a class="add-to-cart pull-left" href="#"><i class="fa fa-shopping-cart"></i></a>
+                                        <a class="beta-btn primary" href="#">Details <i class="fa fa-chevron-right"></i></a>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- .beta-products-list -->
+                </div>
+                <div class="col-sm-3 aside">
+                    <div class="widget">
+                        <h3 class="widget-title">Best Sellers</h3>
+                        <div class="widget-body">
+                            <div class="beta-sales beta-lists">
+                                <div class="media beta-sales-item">
+                                    <a class="pull-left" href="product.html"><img src="./images/product/vp1.jpg" alt=""></a>
+                                    <div class="media-body">
+                                        Hoa văn phòng
+                                        <span class="beta-sales-price">$34.55</span>
+                                    </div>
+                                </div>
+                                <div class="media beta-sales-item">
+                                    <a class="pull-left" href="product.html"><img src="./images/product/gio3.jpg" alt=""></a>
+                                    <div class="media-body">
+                                       Hoa giỏ
+                                        <span class="beta-sales-price">$34.55</span>
+                                    </div>
+                                </div>
+                                <div class="media beta-sales-item">
+                                    <a class="pull-left" href="product.html"><img src="./images/product/lr3.jpg" alt=""></a>
+                                    <div class="media-body">
+                                       Hoa lan rừng
+                                        <span class="beta-sales-price">$34.55</span>
+                                    </div>
+                                </div>
+                                <div class="media beta-sales-item">
+                                    <a class="pull-left" href="product.html"><img src="./images/product/dl2.jpg" alt=""></a>
+                                    <div class="media-body">
+                                       Hoa địa lan
+                                        <span class="beta-sales-price">$34.55</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- best sellers widget -->
+                    <div class="widget">
+                        <h3 class="widget-title">New Products</h3>
+                        <div class="widget-body">
+                            <div class="beta-sales beta-lists">
+                                <div class="media beta-sales-item">
+                                    <a class="pull-left" href="product.html"><img src="./images/product/lhd2.jpg" alt=""></a>
+                                    <div class="media-body">
+                                        Lan hồ điệp
+                                        <span class="beta-sales-price">$34.55</span>
+                                    </div>
+                                </div>
+                                <div class="media beta-sales-item">
+                                    <a class="pull-left" href="product.html"><img src="./images/product/tc3.jpg" alt=""></a>
+                                    <div class="media-body">
+                                        Hoa tiệc cưới
+                                        <span class="beta-sales-price">$34.55</span>
+                                    </div>
+                                </div>
+                                <div class="media beta-sales-item">
+                                    <a class="pull-left" href="product.html"><img src="./images/product/vp3.jpg" alt=""></a>
+                                    <div class="media-body">
+                                        Hoa văn phòng
+                                        <span class="beta-sales-price">$34.55</span>
+                                    </div>
+                                </div>
+                                <div class="media beta-sales-item">
+                                    <a class="pull-left" href="product.html"><img src="./images/product/pl2.jpg" alt=""></a>
+                                    <div class="media-body">
+                                        Hoa phong lan
+                                        <span class="beta-sales-price">$34.55</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- best sellers widget -->
+                </div>
+            </div>
+        </div> <!-- #content -->
+    </div>
+                
+            <!-- footer -->
+            <footer>
+                <div class="footer">
+                    <p>Copyright © 2019. All rights reserved. Design by Bích Ngọc </p>
+                </div>
+            </footer>                  
+            
+          
+        </div>
+
+          
+
+ 
+    </body>
+<script type="text/javascript" src="./assets/js/menu.js"></script>
+</html>
