@@ -3,7 +3,7 @@
 
 
 <div class="col-sm-9">
-  <h4><small>Danh sách sản phẩm</small></h4>
+  <h4><small>Danh sách loại sản phẩm</small></h4>
   <hr>
   @if(count($errors) > 0)
   <div class="alert alert-danger">

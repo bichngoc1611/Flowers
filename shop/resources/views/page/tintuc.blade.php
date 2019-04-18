@@ -45,7 +45,7 @@
 						<div class="col-md-9 col-sm-8 col-xs-12 news-info ">
 							<h2 class="name"><a href="">{{$tt->title}} </a></h2>
 							<p class="date">{{$tt->create_at}} </p>
-							<div class="desc"><div style="text-align: justify;"><span style="line-height: 1.42857; box-sizing: border-box;">{{$tt->content}} </span></div></div>
+							<div class="desc"><div style="text-align: justify;"><span style="line-height: 1.42857; box-sizing: border-box;">{!!$tt->content!!} </span></div></div>
 						</div>
 
 					</div>

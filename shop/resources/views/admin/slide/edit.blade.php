@@ -21,9 +21,9 @@
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <form action="admin/slide/edit/{{$slide->id}} " method="POST" enctype="multipart/form-data">
-                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                 {{csrf_field()}}
 
-                <input type="hidden" name="_method" value="POST" />
+                <input type="hidden" name="_method" value="PUT" />
                 <div class="form-group">
                     <lable> Name </lable>
                     <input type="text" class="form-control" id="name" name="name" value="{{$slide->name}} " >

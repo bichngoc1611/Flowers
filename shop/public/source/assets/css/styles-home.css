@@ -671,29 +671,25 @@ End CSS structure reset Bootstrap
   line-height: 28px;
   margin-bottom: 0;
 }
-.header-content .header-right .search {
+.search {
   float: right;
 }
-.header-content .header-right .search .form-search .form-search-controls {
+ .search .form-search .form-search-controls {
   float: left;
 }
-.header-content .header-right .search .form-search .form-search-controls input {
-  margin-right: -1px;
-  width: 325px;
-  border: 1px solid #dddddd;
-  border-radius: 0;
-  color: #aaaaaa;
+.search .form-search .form-search-controls input {  
+  width: 400px;
   height: 40px;
-  padding: 5px;
+ 
 }
-.header-content .header-right .search .form-search .form-search-controls .select-categories {
+ .search .form-search .form-search-controls .select-categories {
   float: right;
   margin: 0;
   overflow: hidden;
   position: relative;
   width: 181px;
 }
-.header-content .header-right .search .form-search .form-search-controls .select-categories:after {
+.search .form-search .form-search-controls .select-categories:after {
   content: "";
   font-family: "FontAwesome";
   font-size: 13px;
@@ -705,7 +701,7 @@ End CSS structure reset Bootstrap
   top: 2px;
   width: 30px;
 }
-.header-content .header-right .search .form-search .form-search-controls .select-categories select {
+.search .form-search .form-search-controls .select-categories select {
   border: 1px solid #dddddd;
   border-radius: 0;
   color: #aaaaaa;
@@ -716,14 +712,14 @@ End CSS structure reset Bootstrap
   background-color: #f6f6f6;
   width: 180px;
 }
-.header-content .header-right .search .form-search .form-search-controls .select-categories select .option {
+.search .form-search .form-search-controls .select-categories select .option {
   padding: 5px 10px;
   cursor: pointer;
 }
-.header-content .header-right .search .form-search .form-search-controls .select-categories select .option:hover {
+.search .form-search .form-search-controls .select-categories select .option:hover {
   background-color: #ebbd58;
 }
-.header-content .header-right .search .form-search .btn-search {
+.search .form-search .btn-search {
   background-color: #ebb058;
   color: #ffffff;
   height: 40px;
@@ -736,13 +732,14 @@ End CSS structure reset Bootstrap
   background-clip: padding-box;
   font-size: 14px;
   border: none;
+  cursor: pointer;
   float: right;
 }
-.header-content .header-right .search .form-search .btn-search:hover {
+ .search .form-search .btn-search:hover {
   background-color: #f6f6f6;
   color: #eb9e58;
 }
-.header-content .header-right .search-mobile .form-search .form-search-controls input {
+ .search-mobile .form-search .form-search-controls input {
   margin-right: -1px;
   width: 100%;
   border: 1px solid #dddddd;
@@ -779,14 +776,7 @@ End CSS structure reset Bootstrap
   height: 43px;
   line-height: 40px;
 }
-.header-content .header-right .cart .heading a .icon {
-  background-image: url("Images/i_mycart.png");
-  color: transparent;
-  display: inline-block;
-  height: 45px;
-  margin-right: 11px;
-  width: 45px;
-}
+
 .header-content .header-right .cart .heading a i {
   margin-left: 15px;
 }

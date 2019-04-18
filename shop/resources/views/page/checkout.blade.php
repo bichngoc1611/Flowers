@@ -16,8 +16,8 @@
 
 <div class="container">
 	<div id="content">
-		
-		<form action="{{route('dathang')}} " method="post" class="beta-form-checkout">
+		{{csrf_field()}}
+		<form action="dathang " method="post" class="beta-form-checkout">
 			<input type="hidden" name="_token" value="{{csrf_token()}} ">
 			<div class="row">
 				@if(Session::has('thongbao')){{Session::get('thongbao')}} @endif
@@ -27,23 +27,23 @@
 					
 					<div class="form-block">
 						<label for="your_last_name">Họ tên*</label>
-						<input type="text" id="name" name="full_name" required>
+						<input type="text" id="name" name="full_name" value="@if(Auth::check()){{Auth::user()->full_name}} @endif "  >
 					</div>
 
 					<div class="form-block">
 						<label for="email">Email*</label>
-						<input type="email" id="email" name="email" required placeholder="expample@gmail.com">
+						<input type="email" id="email" name="email"  placeholder="expample@gmail.com" value="@if(Auth::check()){{Auth::user()->email}} @endif " >
 					</div>
 
 					<div class="form-block">
 						<label for="adress">Địa chỉ*</label>
-						<input type="text" id="address" name="address" placeholder="Street Address" required>
-					</div>		
+						<input type="text" id="address" name="address" placeholder="Street Address" value="@if(Auth::check()){{Auth::user()->address}} @endif " >
+					</div>		 
 
 
 					<div class="form-block">
 						<label for="phone">Phone*</label>
-						<input type="text" id="phone" name="phone" required>
+						<input type="text" id="phone" name="phone" value="@if(Auth::check()){{Auth::user()->phone_number}}@endif " >
 					</div>
 					
 					<div class="form-block">
@@ -107,7 +107,7 @@
 							</ul>
 						</div>
 
-						<div class="text-center"><button type="submit" class="beta-btn primary" href="#">Đặt hàng <i class="fa fa-chevron-right"></i></button></div>
+						<div class="text-center"><button type="submit" class="beta-btn primary" >Đặt hàng <i class="fa fa-chevron-right"></i></button></div>
 					</div> <!-- .your-order -->
 				</div>
 			</div>

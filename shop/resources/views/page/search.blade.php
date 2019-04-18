@@ -46,7 +46,7 @@
                     </div>
                     
                 </div> <!-- .beta-products-list -->
-                
+                </div>
 
               
                     

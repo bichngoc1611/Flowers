@@ -1,78 +1,74 @@
-@extends('admin.layout.index')
+@extends('admin.layout.master')
 @section('content')
-    <div class="container mt-3 mb-5">
-        <div class="row"> 
-            <div class="col-md-6 offset-md-3">
-                <h5 class="text-info"> Thêm sản phẩm </h5> 
-            </div>
+
+
+<div class="col-sm-9">
+  <h4><small>Sửa tin tức{{$news->name}} </small></h4>
+  <hr>
+  @if(count($errors) > 0)
+  <div class="alert alert-danger">
+    @foreach($errors->all() as $err)
+    {{$err}}
+    @endforeach
+</div>
+@endif
+@if(Session('thongbao'))
+<div class="alert alert-success">
+    {{Session('thongbao')}}
+</div>
+@endif
+<div class="content">
+    <form action="admin/news/edit/{{$news->id}}" method="POST" enctype="multipart/form-data">
+
+        {{csrf_field()}}
+        <input type="hidden" name="_method" value="PUT" />
+        <div class="form-group">
+            <lable> Title </lable>
+            <input type="text" id="title" class="form-control" placeholder="Nhập tiêu đề" name="title" value="{{$news->title}} " >
         </div>
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <p class="mb-3 mt-3 text-success"> 
-               
-                </p>
-            </div>
+        
+        <div class="form-group">
+            <lable> Content </lable>
+            <textarea id="content" class="form-control ckeditor" name="content" placeholder="Nhập nội dung">{{$news->content}} </textarea>
         </div>
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <form action="admin/products/store" method="POST" enctype="multipart/form-data">
-               
-                <input type="hidden" name="_method" value="POST" />
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Name </lable>
-                        <input type="text" id="name" placeholder="Name" name="name">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Producttype </lable>
-                        <select class="form-control" name="producttype_id">
-                           
-                                <option value="{{$tl->id}}">
-                                  
-                                </option>
-                           
-                        </select>
-                        
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Description </lable>
-                        <textarea id="description" name="description"></textarea>
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Price </lable>
-                        <input type="text" id="price" placeholder="Price" name="price">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Promotion_price </lable>
-                        <input type="text" id="promotion_price" placeholder="Promotion_price" name="promotion_price">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Image </lable>
-                        <input type="file" id="image" name="image" class="form-control">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Unit </lable>
-                        <input type="text" id="unit" placeholder="Unit" name="unit">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> New </lable>
-                        <input type="text" id="new" placeholder="New" name="new">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> <b> Status </b></lable>
-                        <lable class="radio-inline">
-                        <input type="radio" id="status" name="status" value="Còn" checked=""> Còn
-                        </lable>
-                        <lable class="radio-inline">
-                        <input type="radio" id="status" name="status" value="Hết" checked=""> Hết
-                        </lable>
-                    </div>
-                    <div>
-                        <button type="submit"> CREATE
-                        </button>
-                    </div>
-                    
-                </form>
-            </div>
+
+        <div class="form-group">
+            <lable> <b> Type_news </b></lable>
+            <lable class="radio-inline">
+                <input type="radio" id="type_news" name="type_news" value="1" 
+                @if($news->type_news == 1)
+                {{"checked"}}
+                @endif
+                > 1(Mới)
+            </lable>
+            <lable class="radio-inline">
+                <input type="radio" id="type_news" name="type_news" value="0" 
+                @if($news->type_news == 0)
+                {{"checked"}}
+                @endif
+                > 0
+            </lable>
         </div>
-    </div>
+
+        <div class="form-group">
+            <lable> Image </lable>       
+            <p>
+                <img width="100px" height="100px" src="./public/source/images/product/{{$news->image}}">
+            </p>    
+            <input type="file" id="image" name="image" class="form-control">
+        </div>
+        
+
+        <div>
+            <button type="submit" class="btn btn-danger">Edit</button>
+            <button type="reset" class="btn btn-success">Reset</button>
+        </div>
+
+    </form>
+</div>
+</div>
+</div>
+
+<div class="space10">&nbsp;</div>
+
 @endsection

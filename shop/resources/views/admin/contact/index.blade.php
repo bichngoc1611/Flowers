@@ -3,8 +3,8 @@
 
 <div class="col-sm-9">
 
-    <h4 class="text-center"> News </h4>
-    
+    <h4 class="text-center">Quản lý Liên hệ </h4>
+   
     @if(count($errors) > 0)
     <div class="alert alert-danger">
         @foreach($errors->all() as $err)
@@ -21,39 +21,38 @@
         <thead>
             <tr align="text-center" >
                 <th> ID </th>
-                <th> Title </th>
-                <th> Content </th>
-                <th> Type_news </th>
-                <th> Image </th>
+                <th> Name </th>
+                <th> Address </th>
+                <th> Email </th>
+                <th> Phone_number </th>
+                <th> Message </th>
                 <th> Delete </th>
-                <th> Edit </th>
+                
             </tr>
         </thead>
         <tbody>
-            @foreach($news as $n)
+            @foreach($contact as $ct)
+            @foreach($user as $u)
+            @if($ct->user_id == $u->id)
             <tr>
-                <td> {{$n->id}} </td>
-                <td> {{$n->title}} </td>
-                <td> {!!$n->content!!} </td>
-                <td> {{$n->type_news}} </td>
-                <td>
-                    <img width="100px" height="100px" src="./public/source/images/product/{{$n->image}}">
-                </td>                 
+                <td> {{$ct->id}} </td>
+                <td> {{$u->full_name}} </td>
+                <td> {{$u->address}} </td>
+                <td> {{$u->email}} </td>
+                <td> {{$u->phone_number}} </td>
+                <td> {{$ct->message}} </td>                
 
                 <td >
                     <div class="d-flex flex-row justify-content-center">
-                        <form action="admin/news/delete/{{$n->id}}" method="GET">
+                        <form action="admin/contact/delete/{{$ct->id}}" method="GET">
                             <button class='btn btn-danger ml-2'> <i class="fa fa-trash-o"></i> </button>
                         </form>
+                    </div>
                 </td>
-                <td>
-                        <form action="admin/news/edit/{{$n->id}}" method="GET">
-                            <button class='btn btn-success ml-2'> <i class="fa fa-edit"></i> </button> 
-                        </form>
-                        
-                    </div> 
-                </td> 
+
             </tr>
+            @endif
+            @endforeach
             @endforeach
 
         </tbody>

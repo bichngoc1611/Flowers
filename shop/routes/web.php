@@ -35,10 +35,10 @@ Route::get('chi-tiet-san-pham/{id}',[
 	'uses'=>'PageController@getChitiet'
 ]);
 
-Route::get('lien-he',[
-	'as'=>'lienhe',
-	'uses'=>'PageController@getLienHe'
-]);
+Route::get('lienhe','PageController@getLienHe');
+
+// Route::get('lienhe','ContactController@index');
+Route::post('lienhe','ContactController@store');
 
 Route::get('gioi-thieu',[
 	'as'=>'gioithieu',
@@ -49,7 +49,6 @@ Route::get('tin-tuc',[
 	'as'=>'tintuc',
 	'uses'=>'PageController@getTinTuc'
 ]);
-
 Route::get('add-to-cart/{id}',[
 	'as'=>'themgiohang',
 	'uses'=>'PageController@getAddtoCart'
@@ -65,30 +64,12 @@ Route::get('dat-hang',[
 	'uses'=>'PageController@getCheckout'
 ]);
 
-Route::post('dat-hang',[
-	'as'=>'dathang',
-	'uses'=>'PageController@postCheckout'
-]);
+// Route::post('dat-hang',[
+// 	'as'=>'dathang',
+// 	'uses'=>'PageController@postCheckout'
+// ]);
 
-Route::get('dang-nhap',[
-	'as'=>'login',
-	'uses'=>'PageController@getLogin'
-]);
-
-Route::post('dang-nhap',[
-	'as'=>'login',
-	'uses'=>'PageController@postLogin'
-]);
-
-Route::get('dang-ki',[
-	'as'=>'signup',
-	'uses'=>'PageController@getSignup'
-]);
-
-Route::post('dang-ki',[
-	'as'=>'signup',
-	'uses'=>'PageController@postSignup'
-]);
+Route::post('dathang','PageController@postCheckout');
 
 Route::get('search',[
 	'as'=>'search',
@@ -96,13 +77,18 @@ Route::get('search',[
 ]);
 
 //admin
-Route::get('
-	admin',[
-	'as'=>'admin',
-	'uses'=>'PageController@getIndexadmin'
-]);
 
-Route::group(['prefix'=>'admin'],function(){
+
+Route::get('dangki','UserController@getsignup');
+Route::post('dangki','UserController@postsignup');
+
+Route::get('dangnhap','UserController@getlogin');
+Route::post('dangnhap','UserController@postlogin');
+Route::get('dangxuat','UserController@logout');	
+
+
+Route::group(['prefix'=>'admin', 'middleware'=>'adminLogin'],function(){
+	Route::get('home','PageController@getIndexadmin');
 	//admin/productType
 	Route::group(['prefix'=>'productType'],function(){
 		Route::get('index','ProductTypeController@index');
@@ -128,43 +114,55 @@ Route::group(['prefix'=>'admin'],function(){
 		Route::get('delete/{id}','ProductController@destroy');
 	});
 	// //admin/user
-	// Route::group(['prefix'=>'user'],function(){
-	// 	Route::get('list','ProductController@getList');
+	Route::group(['prefix'=>'user'],function(){
+		Route::get('index','UserController@index');
 
-	// 	Route::get('edit','ProductController@getList');
+		Route::get('edit/{id}','UserController@edit');
+		Route::put('edit/{id}','UserController@update');
+		
+		Route::get('add','UserController@create');
+		Route::post('add','UserController@store');
 
-	// 	Route::get('add','ProductController@getList');
-	// });
-	// //admin/new
-	// Route::group(['prefix'=>'new'],function(){
-	// 	Route::get('list','ProductController@getList');
-
-	// 	Route::get('edit','ProductController@getList');
-
-	// 	Route::get('add','ProductController@getList');
-	// });
+		Route::get('delete/{id}','UserController@destroy');
+	});
+	
 	// //admin/slide
 	Route::group(['prefix'=>'slide'],function(){
 		Route::get('index','SlideController@index');
 
 		Route::get('edit/{id}','SlideController@edit');
-		Route::post('edit/{id}','SlideController@update');
+		Route::put('edit/{id}','SlideController@update');
 
 		Route::get('add','SlideController@create');
 		Route::post('add','SlideController@store');
 
 		Route::get('delete/{id}','SlideController@destroy');
 	});
-	//
+	//admin/news
 	Route::group(['prefix'=>'news'],function(){
 		Route::get('index','NewsController@index');
 
 		Route::get('edit/{id}','NewsController@edit');
-		Route::post('edit/{id}','NewsController@update');
+		Route::put('edit/{id}','NewsController@update');
 
 		Route::get('add','NewsController@create');
 		Route::post('add','NewsController@store');
 
 		Route::get('delete/{id}','NewsController@destroy');
+	});
+	//admin/bill
+	Route::group(['prefix'=>'bill'],function(){
+		Route::get('index','BillController@index');
+		Route::get('chitietbill/{id}','BillController@show');
+
+		Route::post('chitietbill/{id}','BillController@update');
+		
+	});
+
+	Route::group(['prefix'=>'contact'],function(){
+		Route::get('index','ContactController@index');
+		
+		Route::get('delete/{id}','ContactController@destroy');
+		
 	});
 });

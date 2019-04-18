@@ -43,29 +43,39 @@
 
 
     <div class="space20">&nbsp;</div>
+    <form action="add-to-cart/{{$ct_sanpham->id}}" method="get">
+      <input type="hidden" name="_token" value="{{csrf_token()}} ">
+      <div class="single-item-options">
+        <div class="options">
+          <span>Số lượng</span>
+          <input type="number" min="1" name="sl" value="" style="width: 50px;" required="">
+        </div>   
 
-    <div class="single-item-options">
+        <button  type="submit" class="add-to-cart"
+        @if($ct_sanpham->status == "Hết")
+        {{"disabled"}}
+        @endif><i class="fa fa-shopping-cart" ></i></button>
 
-      <div class="options">
-        <span>Số lượng</span>
-        <span>  </span>
+        <div class="clearfix"></div>
       </div>
-
-      <a class="add-to-cart" href="{{route('themgiohang',$ct_sanpham->id)}}"><i class="fa fa-shopping-cart"></i></a>
-      <div class="clearfix"></div>
-    </div>
+      @if($ct_sanpham->status == "Còn")
+      <div class="quantity"> <span>Sản phẩm còn</span></div>
+      @else
+      <div class="quantity"> <span>Sản phẩm hết</span></div>
+      @endif
+    </form>
   </div>
 </div>
 
 <div class="space40">&nbsp;</div>
 <div class="woocommerce-tabs">
  <ul class="tabs">
-  <li><a href="#tab-description">Mô tả</a></li>
+  <li><a href="">Mô tả</a></li>
   
 </ul>
 
 <div class="panel" id="tab-description">
-  <p>{{$ct_sanpham->description}} </p>
+  <p>{!!$ct_sanpham->description!!} </p>
 </div>
 
 </div>
@@ -109,37 +119,40 @@
 </div>
 <div class="col-sm-3 aside">
   <div class="widget">
-   <h3 class="widget-title">Best Sellers</h3>
+   <h3 class="widget-title">Product Sale </h3>
    <div class="widget-body">
     <div class="beta-sales beta-lists">
-     <div class="media beta-sales-item">
-      <a class="pull-left" href="product.html"><img src="./public/source/images/product/vp1.jpg" alt=""></a>
-      <div class="media-body">
-       Hoa văn phòng
-       <span class="beta-sales-price">$34.55</span>
-     </div>
-   </div>
+      @foreach($sp_km as $sp_km)
+      @if($sp_km->promotion_price != 0)
+      <div class="media beta-sales-item">
+        <a class="pull-left" href="{{route('chitietsanpham',$sp_km->id)}}"><img src="./public/source/images/product/{{$sp_km->image}}" alt=""></a>
+        <div class="media-body">
+          {{$sp_km->name}}
+          <span class="beta-sales-price">{{number_format($sp_km->promotion_price)}} VND </span>
+        </div>
+      </div>
+      @endif
+      @endforeach
 
 
-
-</div>
-</div>
+    </div>
+  </div>
 </div> <!-- best sellers widget -->
 <div class="widget">
  <h3 class="widget-title">New Products</h3>
  <div class="widget-body">
   <div class="beta-sales beta-lists">
     @foreach($new_product as $new)
-   <div class="media beta-sales-item">
-    <a class="pull-left" href="{{route('chitietsanpham',$new->id)}}"><img src="./public/source/images/product/{{$new->image}} " alt=""></a>
-    <div class="media-body">
-     {{$new->name}}
-     <span class="beta-sales-price">{{number_format($new->unit_price)}}VND</span>
+    <div class="media beta-sales-item">
+      <a class="pull-left" href="{{route('chitietsanpham',$new->id)}}"><img src="./public/source/images/product/{{$new->image}} " alt=""></a>
+      <div class="media-body">
+       {{$new->name}}
+       <span class="beta-sales-price">{{number_format($new->unit_price)}}VND</span>
+     </div>
    </div>
- </div>
-@endforeach
+   @endforeach
 
-</div>
+ </div>
 </div>
 </div> <!-- best sellers widget -->
 </div>

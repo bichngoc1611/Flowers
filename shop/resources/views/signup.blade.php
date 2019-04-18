@@ -44,7 +44,7 @@
 		</div>
 		<div class="sub-main">	
 
-			<form action="{{route('signup')}} " method="post">
+			<form action="dangki" method="post">
 
 				<input type="hidden" name="_token" value="{{csrf_token()}}">
 

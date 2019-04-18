@@ -5,17 +5,20 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="#"><span>Tayne's </span>Admin</a>
+				<a class="navbar-brand" href="admin"><span>Tayne's </span>Admin</a>
 				<ul class="nav navbar-top-links navbar-right">
-					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-						Đăng nhập
+
+					@if(Auth::check() )
+					<li class="dropdown" ><a class="dropdown-toggle" href="admin"><i class="fa fa-user-o" ></i>
+						{{Auth::user()->full_name}}
 					</a>
-					</li>
-					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+					</li>					
+					<li class="dropdown" ><a class="dropdown-toggle" href="dangxuat">
 						Đăng xuất
 					</a>
 					</li>
 					
+					@endif
 				</ul>
 			</div>
 		</div><!-- /.container-fluid -->

@@ -7,31 +7,43 @@
  		sẽ trả lời bạn ngay sau khi nhận được. Xin chân thành cảm ơn!
  	</div>
  	<div class="row">
+ 		@if(count($errors) > 0)
+ 		<div class="alert alert-danger">
+ 			@foreach($errors->all() as $err)
+ 			{{$err}}
+ 			@endforeach
+ 		</div>
+ 		@endif
+ 		@if(Session('thongbao'))
+ 		<div class="alert alert-success">
+ 			{{Session('thongbao')}}
+ 		</div>
+ 		@endif
  		<div class="col-md-6 col-sm-12 col-xs-12">
  			<div class="contact-feedback">
- 				<form ng-submit="sendContact()" class="ng-pristine ng-invalid ng-invalid-required ng-valid-email">
+ 				
+ 				<form action="lienhe" method="post" class="ng-pristine ng-invalid ng-invalid-required ng-valid-email">
+ 					<input type="hidden" name="_token" value="{{csrf_token()}}">
+ 					<input type="hidden" name="_method" value="POST" />
  					<div class="form-group input-group">
  						<span class="input-group-addon"><i class="glyphicon glyphicon glyphicon-user"></i></span>
- 						<input type="text" placeholder="Họ tên" ng-model="Name" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" required="">
+ 						<input type="text" placeholder="Họ tên" name="name" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" value="@if(Auth::check()){{Auth::user()->full_name}} @endif" >
  					</div>
  					<div class="form-group input-group">
  						<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
- 						<input type="text" placeholder="Địa chỉ" ng-model="Address" class="form-control ng-pristine ng-untouched ng-valid">
+ 						<input type="text" placeholder="Địa chỉ" name="address" class="form-control ng-pristine ng-untouched ng-valid" value="@if(Auth::check()){{Auth::user()->address}} @endif" >
  					</div>
  					<div class="form-group input-group">
  						<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
- 						<input type="email" placeholder="Email" ng-model="Email" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" required="">
+ 						<input type="email" placeholder="Email" name="email" ng-model="Email" class="form-control ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required"  value="@if(Auth::check()){{Auth::user()->email}} @endif" >
  					</div>
  					<div class="form-group input-group">
  						<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
- 						<input type="text" placeholder="Điện thoại" ng-model="Phone" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" required="">
+ 						<input type="text" placeholder="Điện thoại" name="phone" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required"  value="@if(Auth::check()){{Auth::user()->phone_number}} @endif" >
  					</div>
- 					<div class="form-group input-group">
- 						<span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
- 						<input type="text" placeholder="Tiêu đề" ng-model="Title" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" required="">
- 					</div>
+ 					
  					<div class="form-group">
- 						<textarea placeholder="Nội dung" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" rows="3" ng-model="Content" required=""></textarea>
+ 						<textarea placeholder="Nội dung" name="message" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" rows="3" ng-model="Content"></textarea>
  					</div>
  					<button class="btn btn-defaults" type="submit">Gửi</button>
  				</form>

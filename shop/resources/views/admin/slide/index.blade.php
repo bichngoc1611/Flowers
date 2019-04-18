@@ -3,21 +3,8 @@
 
 <div class="col-sm-9">
 
-    <h4 class="text-center"> Slide </h4>
-    <div class="row mb-3">
-        <div class="col-md-12 d-flex flex-row">
-            <div class="d-flex align-items-center mr-3"> Tìm kiếm: </div> 
-            <form action="admin/products/search-product" method="GET" class="d-flex flex-row mr-3">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search" name="search" aria-label="Search">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-dark"><i class="fas fa-search"></i></button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        
-    </div>
+    <h4 class="text-center"> Quản lý Slide </h4>
+    
     @if(count($errors) > 0)
     <div class="alert alert-danger">
         @foreach($errors->all() as $err)

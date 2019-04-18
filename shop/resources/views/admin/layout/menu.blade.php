@@ -44,7 +44,7 @@
 				</ul>
 			</li>
 			<li><a data-toggle="collapse" href="#sub-item-3">
-				<em class="fa fa-navicon">&nbsp;</em> Sản phẩm <span data-toggle="collapse" href="#sub-item-3" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				<em class="fa fa-product-hunt">&nbsp;</em> Sản phẩm <span data-toggle="collapse" href="#sub-item-3" class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
 				<ul class="children collapse" id="sub-item-3">
 					<li><a class="" href="admin/product/index">
@@ -57,7 +57,7 @@
 				</ul>
 			</li>
 			<li><a data-toggle="collapse" href="#sub-item-4">
-				<em class="fa fa-navicon">&nbsp;</em> Tin tức <span data-toggle="collapse" href="#sub-item-4" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				<em class="fa fa-newspaper-o">&nbsp;</em> Tin tức <span data-toggle="collapse" href="#sub-item-4" class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
 				<ul class="children collapse" id="sub-item-4">
 					<li><a class="" href="admin/news/index">
@@ -70,7 +70,7 @@
 				</ul>
 			</li>
 				<li><a data-toggle="collapse" href="#sub-item-5">
-				<em class="fa fa-navicon">&nbsp;</em> Slide <span data-toggle="collapse" href="#sub-item-5" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				<em class="fa fa-sliders">&nbsp;</em> Slide <span data-toggle="collapse" href="#sub-item-5" class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
 				<ul class="children collapse" id="sub-item-5">
 					<li><a class="" href="admin/slide/index">
@@ -79,6 +79,28 @@
 					<li><a class="" href="admin/slide/add">
 						&nbsp;</span> Add
 					</a></li>
+						
+				</ul>
+			</li>
+			</li>
+				<li><a data-toggle="collapse" href="#sub-item-6">
+				<em class="fa fa-id-card-o">&nbsp;</em> Hóa đơn <span data-toggle="collapse" href="#sub-item-6" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children collapse" id="sub-item-6">
+					<li><a class="" href="admin/bill/index">
+						&nbsp;</span> List
+					</a></li>				
+						
+				</ul>
+			</li>
+			</li>
+				<li><a data-toggle="collapse" href="#sub-item-7">
+				<em class="fa fa-file-code-o">&nbsp;</em> Liên hệ <span data-toggle="collapse" href="#sub-item-7" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children collapse" id="sub-item-7">
+					<li><a class="" href="admin/contact/index">
+						&nbsp;</span> List
+					</a></li>				
 						
 				</ul>
 			</li>

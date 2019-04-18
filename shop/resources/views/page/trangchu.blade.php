@@ -66,7 +66,7 @@
 <div class="container">
     <div id="content" class="space-top-none">
         <div class="main-content">
-            <div class="space60">&nbsp;</div>
+   
             <div class="row">
                 <div class="col-sm-12">
                     <div class="beta-products-list">
@@ -132,7 +132,9 @@
                                     </p>
                                 </div>
                                 <div class="single-item-caption">
+                                
                                     <a class="add-to-cart pull-left" href="{{route('themgiohang',$ps->id)}}"><i class="fa fa-shopping-cart"></i></a>
+                            
                                     <a class="beta-btn primary" href="{{route('chitietsanpham',$ps->id)}}">Details <i class="fa fa-chevron-right"></i></a>
                                     <div class="clearfix"></div>
                                 </div>
@@ -146,10 +148,10 @@
                         
                     </div><!-- .beta-products-list -->
                     <div class="row">{{$product_sale->links()}}</div>
-                    <div class="space40">&nbsp;</div>
+                 
 
                     
-                </div> 
+                </div>
             </div>
         </div>
     </div>

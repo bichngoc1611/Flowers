@@ -46,11 +46,11 @@
         </div>
         <div class="form-group">
             <lable> Price </lable>
-            <input type="text" id="price" class="form-control" placeholder="Price" name="price" value="{{$product->unit_price}} " >
+            <input type="" id="price" class="form-control" placeholder="Price" name="price" value="{{$product->unit_price}} " >
         </div>
         <div class="form-group">
             <lable> Promotion_price </lable>
-            <input type="text" id="promotion_price" class="form-control" placeholder="Promotion_price" name="promotion_price" value="{{$product->promotion_price}} " >
+            <input type="number" id="promotion_price" class="form-control" placeholder="Promotion_price" name="promotion_price" value="{{$product->promotion_price}} " >
         </div>
         <div class="form-group">
             <lable> Image </lable>
@@ -63,9 +63,23 @@
             <lable> Unit </lable>
             <input type="text" id="unit" class="form-control" placeholder="Unit" name="unit" value="{{$product->unit}} " >
         </div>
-        <div class="form-group">
-            <lable> New </lable>
-            <input type="text" id="new" class="form-control" placeholder="New" name="new" value="{{$product->new}} " >
+       <div class="form-group">
+            <lable> <b> New </b></lable>
+            <lable class="radio-inline">
+                <input type="radio" id="new" name="new" value="1"
+                @if($product->new == 1)
+                {{"checked"}}
+                @endif
+                >
+                Mới
+            </lable>
+            <lable class="radio-inline">
+                <input type="radio" id="new" name="new" value="0" 
+                @if($product->new == 0)
+                {{"checked"}}
+                @endif
+                > Đã có
+            </lable>
         </div>
 
         <div class="form-group">

@@ -88,9 +88,26 @@ class NewsController extends Controller
      * @param  \App\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, News $news)
+    public function update(Request $request, $id)
     {
-        //
+        $news = News::find($id);
+        $news->title = $request->title;
+        $news->content = $request->content;
+        $news->type_news = $request->type_news;
+        if($request->hasFile('image')){
+            $file = $request->file('image');
+            $duoi = $file->getClientOriginalExtension();
+            if($duoi != 'jpg' && $duoi != 'png' && $duoi != 'jpeg'){
+                return redirect('admin/news/edit/{{id}}')->with('thongbao','Chỉ được chọn file có đuôi jpg, png, jpeg');
+            }
+            $name = $file->getClientOriginalName();
+            $image = time().'_'.$name;
+            $file->move('public/source/images/product/', $image);
+            unlink('public/source/images/product/'.$news->image);
+            $news->image = $image;
+        }
+        $news->save();
+         return redirect()->back()->with('thongbao','Sửa thành công');
     }
 
     /**
@@ -99,8 +116,10 @@ class NewsController extends Controller
      * @param  \App\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function destroy(News $news)
+    public function destroy( $id)
     {
-        //
+        $news = News::find($id);
+        $news->delete();
+        return redirect()->back()->with('thongbao','Xóa thành công');
     }
 }

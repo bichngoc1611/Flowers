@@ -8,10 +8,16 @@
                                 <li><i class="fa fa-phone"></i> <span>Hotline:01667854378</span></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right topmenu  hidden-xs hidden-sm">
-                                <li class="order-check"><a href="{{route('dathang')}}"><i class="fa fa-pencil-square-o"></i> Kiểm tra đơn hàng</a></li>
-                                <li class="order-cart"><a href="{{route('dathang')}}"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
-                                <li class="account-login"><a href="{{route('login')}} "><i class="fa fa-sign-language"></i> Đăng nhập </a></li>
-                                <li class="account-register"><a href="{{route('signup')}}"><i class="fa fa-key"></i> Đăng ký </a></li>
+                               
+                                <li class="order-check"><a href="{{route('dathang')}}"><i class="fa fa-pencil-square-o"></i>Kiểm tra đơn hàng</a></li>
+                                <li class="order-cart"><a href="{{route('dathang')}}"><i class="fa fa-shopping-cart"></i>Giỏ hàng</a></li>
+                                 @if(Auth::check())
+                                <li class="account-login"><a href="/"><i class="fa fa-user-circle"></i>{{Auth::user()->full_name}} </a></li>
+                                <li class="account-register"><a href="dangxuat"><i class="fa fa-user-times"></i>Đăng xuất </a></li>
+                                @else
+                                <li class="account-register"><a href="dangnhap"><i class="fa fa-user-circle"></i>Đăng nhập </a></li>
+                                <li class="account-register"><a href="dangki"><i class="fa fa-key"></i>Đăng ký </a></li>
+                                @endif
                             </ul>
                             <div class="show-mobile hidden-lg hidden-md">
                                 <div class="quick-user">
@@ -21,10 +27,10 @@
                                     <div class="inner-toggle">
                                         <ul class="login links">
                                             <li>
-                                                <a href="{{route('login')}}"><i class="fa fa-sign-in"></i> Đăng ký</a>
+                                                <a href="dangki"><i class="fa fa-sign-out"></i> Đăng ký</a>
                                             </li>
                                             <li>
-                                                <a href="{{route('signup')}}"><i class="fa fa-key"></i> Đăng nhập</a>
+                                                <a href="dangnhap"><i class="fa fa-user"></i> Đăng nhập</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -52,7 +58,7 @@
                     <div class="row">
                         <div class="col-md-3 col-xs-12 col-sm-12 header-left text-center">
                             <div class="logo">
-                                <a href="" title="">
+                                <a href="index" title="">
                                     <img alt="flowershop" src="./public/source/images/slide/logo.png" class="img-responsive">
                                 </a>
                             </div>
@@ -78,22 +84,22 @@
                                 </ul>
                             </div>
                             <div class="row">
-                                <div class="col-md-8 col-sm-7 col-xs-12 top-search">
+                                <div class="col-md-8 top-search">
                                     <div class="search-mobile hidden-md hidden-lg">
                                         <div class="input-cat form-search clearfix">
-                                            <div class="beta-comp">
-                                                <form role="search" method="get" id="searchform" action="{{route('search')}}">
-                                                    <input type="text" value="" name="s" id="s" placeholder="Tìm kiếm..." />
-                                                    <button class="fa fa-search" type="submit" id="searchsubmit"></button>
+                                            <div class="form-search-controls">
+                                                <form class="search" role="search" method="get" id="searchform" action="{{route('search')}}">
+                                                    <input type="text" value="" name="search" class="input timkiem_val" id="s" placeholder="Tìm kiếm..." />
+                                                    <button class="fa fa-search" type="submit" class="nut_tim" id="searchsubmit"></button>
                                                 </form>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="search hidden-sm hidden-xs">
                                         <div class="input-cat form-search clearfix">
-                                           <div class="beta-comp">
-                                            <form role="search" method="get" id="searchform" action="{{route('search')}}">
-                                                <input type="text" value="" name="s" id="s" placeholder="Tìm kiếm..." />
+                                           <div class="form-search-controls">
+                                            <form class="form_timkiem" role="search" method="get" id="searchform" action="{{route('search')}}">
+                                                <input type="text" value="" name="search" class="form-search" id="s" placeholder="Tìm kiếm..." />
                                                 <button class="fa fa-search" type="submit" id="searchsubmit"></button>
                                             </form>
                                         </div>
@@ -101,7 +107,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-5 col-xs-12 top-cart">
+                            <div class="col-md-4 top-cart">
 
                                 <div class="cart">
                                     <div class="beta-select"><i class="fa fa-shopping-cart"></i> Giỏ hàng (@if(Session::has('cart')){{Session('cart')->totalQty}}@else Trống @endif) <i class="fa fa-chevron-down"></i></div>
@@ -182,7 +188,7 @@
                                     <li class="level0"><a class="" href="{{route('sanpham')}}"><span>Sản phẩm</span></a></li>
                                     <li class="level0"><a class="" href="{{route('tintuc')}}"><span>Cẩm nang</span></a></li>
                                     <li class="level0"><a class="" href="{{route('tintuc')}}"><span>Dịch vụ</span></a></li>
-                                    <li class="level0"><a class="" href="{{route('lienhe')}}"><span>Liên hệ</span></a></li>
+                                    <li class="level0"><a class="" href="lienhe"><span>Liên hệ</span></a></li>
                                 </ul>
                             </nav>
                         </nav>

@@ -111,10 +111,9 @@ input.form-control {
   padding: 0px;
   border-radius: 4px; }
 
-.dropdown a.dropdown-toggle {
+.dropdown .dropdown-toggle {
   color: #fff;
-  height: 40px;
-  width: 40px;
+
   padding-top: 11px;
   padding-left: 9px; }
 
@@ -1034,5 +1033,4 @@ p.back-link {
 
 .sidenav{
   background-color: #333;
-
 }

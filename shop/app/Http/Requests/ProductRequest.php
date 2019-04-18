@@ -26,7 +26,7 @@ class ProductRequest extends FormRequest
         return [
             'name' => 'required',
             'producttype_id' =>'required',
-            'price' =>'required',
+            'price' =>'required|numeric|min:1',
             'promotion_price' => 'required',
             'image' => 'required',
             'new' => 'required'
@@ -39,6 +39,8 @@ class ProductRequest extends FormRequest
             'name.required' => 'Vui lòng nhập tên',
             'producttype_id.required' => 'Chưa chọn thể loại',
             'price.required' => 'Chưa nhập giá',
+            'price.numeric' => 'Nhập số',
+            'price.min' => 'Giá thấp nhất là 1',
             'promotion_price.required' => 'Chưa nhập giá khuyến mãi',
             'image.required' => 'Chưa chọn ảnh',
             'new.required' => 'Chưa chọn sản phẩm mới '

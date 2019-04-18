@@ -1,78 +1,80 @@
-@extends('admin.layout.index')
+@extends('admin.layout.master')
 @section('content')
-    <div class="container mt-3 mb-5">
-        <div class="row"> 
-            <div class="col-md-6 offset-md-3">
-                <h5 class="text-info"> Thêm sản phẩm </h5> 
-            </div>
+
+
+<div class="col-sm-9">
+  <h4><small>Sửa người dùng</small></h4>
+  <hr>
+  @if(count($errors) > 0)
+  <div class="alert alert-danger">
+    @foreach($errors->all() as $err)
+    {{$err}}
+    @endforeach
+</div>
+@endif
+@if(Session('thongbao'))
+<div class="alert alert-success">
+    {{Session('thongbao')}}
+</div>
+@endif
+<div class="content">
+    <form action="admin/user/edit/{{$user->id}} " method="POST" enctype="multipart/form-data">
+
+     {{csrf_field()}}
+        <input type="hidden" name="_method" value="PUT" />
+        <div class="form-group">
+            <lable> Full Name </lable>
+            <input type="text" id="name" class="form-control" placeholder="" name="full_name" value="{{$user->full_name}} " >
         </div>
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <p class="mb-3 mt-3 text-success"> 
-               
-                </p>
-            </div>
+        
+        <div class="form-group">
+            <lable> Email </lable>
+            <input type="email" id="email" class="form-control  " disabled="" name="email" value="{{$user->email}} " >
         </div>
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <form action="admin/products/store" method="POST" enctype="multipart/form-data">
-               
-                <input type="hidden" name="_method" value="POST" />
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Name </lable>
-                        <input type="text" id="name" placeholder="Name" name="name">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Producttype </lable>
-                        <select class="form-control" name="producttype_id">
-                           
-                                <option value="{{$tl->id}}">
-                                  
-                                </option>
-                           
-                        </select>
-                        
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Description </lable>
-                        <textarea id="description" name="description"></textarea>
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Price </lable>
-                        <input type="text" id="price" placeholder="Price" name="price">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Promotion_price </lable>
-                        <input type="text" id="promotion_price" placeholder="Promotion_price" name="promotion_price">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Image </lable>
-                        <input type="file" id="image" name="image" class="form-control">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> Unit </lable>
-                        <input type="text" id="unit" placeholder="Unit" name="unit">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> New </lable>
-                        <input type="text" id="new" placeholder="New" name="new">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <lable> <b> Status </b></lable>
-                        <lable class="radio-inline">
-                        <input type="radio" id="status" name="status" value="Còn" checked=""> Còn
-                        </lable>
-                        <lable class="radio-inline">
-                        <input type="radio" id="status" name="status" value="Hết" checked=""> Hết
-                        </lable>
-                    </div>
-                    <div>
-                        <button type="submit"> CREATE
-                        </button>
-                    </div>
-                    
-                </form>
-            </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="idChangePassword" name="changePassword" onchange="changePasswords();">
+            <lable> Đổi lại Password </lable>
+            <input type="password" class="form-control passwords" placeholder="" name="password" disabled  id="pass"  >
         </div>
-    </div>
+
+        <div class="form-group">
+            <lable> RePassword </lable>
+            <input type="password" class="form-control passwords" placeholder="" name="repassword" id="repass" disabled >
+        </div>
+     
+
+        <div>
+            <button type="submit" class="btn btn-danger">Edit</button>
+            <button type="reset" class="btn btn-success">Reset</button>
+        </div>
+
+    </form>
+</div>
+</div>
+</div>
+
+<div class="space10">&nbsp;</div>
+
 @endsection
+
+<script>
+    function changePasswords(){
+        var changePassword = document.getElementById("idChangePassword");
+        var pass = document.getElementById("pass");
+        var repass = document.getElementById("repass");        
+        
+        if (changePassword.checked) {
+            pass.removeAttribute("disabled");
+            repass.removeAttribute("disabled");
+        } else {
+            pass.disabled = true;
+           repass.setAttribute("disabled","false");
+        }
+
+    }
+        
+
+        
+
+</script>
