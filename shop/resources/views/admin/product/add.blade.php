@@ -56,8 +56,13 @@
             <input type="text" id="unit" class="form-control" placeholder="Unit" name="unit">
         </div>
         <div class="form-group">
-            <lable> New </lable>
-            <input type="text" id="new" class="form-control" placeholder="New" name="new">
+            <lable> <b> New </b></lable>
+            <lable class="radio-inline">
+                <input type="radio" id="new" name="new" value="1" checked=""> Mới
+            </lable>
+            <lable class="radio-inline">
+                <input type="radio" id="new" name="new" value="0" checked=""> Đã có
+            </lable>
         </div>
 
         <div class="form-group">

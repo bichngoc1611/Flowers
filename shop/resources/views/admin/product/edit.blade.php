@@ -50,7 +50,7 @@
         </div>
         <div class="form-group">
             <lable> Promotion_price </lable>
-            <input type="number" id="promotion_price" class="form-control" placeholder="Promotion_price" name="promotion_price" value="{{$product->promotion_price}} " >
+            <input type="" id="promotion_price" class="form-control" placeholder="Promotion_price" name="promotion_price" value="{{$product->promotion_price}} " >
         </div>
         <div class="form-group">
             <lable> Image </lable>

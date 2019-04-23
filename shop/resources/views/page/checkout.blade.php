@@ -20,7 +20,11 @@
 		<form action="dathang " method="post" class="beta-form-checkout">
 			<input type="hidden" name="_token" value="{{csrf_token()}} ">
 			<div class="row">
-				@if(Session::has('thongbao')){{Session::get('thongbao')}} @endif
+				@if(Session('thongbao'))
+<div class="alert alert-success">
+    {{Session('thongbao')}}
+</div>
+@endif
 			</div>
 			<div class="row">
 				<div class="col-sm-6">				

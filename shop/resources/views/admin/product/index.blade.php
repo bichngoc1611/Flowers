@@ -41,7 +41,7 @@
                 <td> {{$p->unit_price}} </td>
                 <td> {{$p->promotion_price}} </td>
                 <td> {!!$p->description!!} </td>
-                <td> {{$p->image}}
+                <td>
                     <img class="images" src="./public/source/images/product/{{$p->image}} " style="width: 50px; height: 50px;" >
                 </td>
                 <td> {{$p->status}} </td>

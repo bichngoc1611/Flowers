@@ -76,7 +76,7 @@ class ProductTypeController extends Controller
      * @param  \App\ProductType  $productType
      * @return \Illuminate\Http\Response
      */
-    public function update(ProducttypeRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $type = ProductType::find($id);        
         $type->name = $request->name;

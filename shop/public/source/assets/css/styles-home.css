@@ -278,7 +278,7 @@ img:hover {
   display: block;
 }
 .breadcrumb ul li + li:before {
-  content: "";
+  content: "Ã¯â€žÂ";
   font-family: FontAwesome;
   padding: 2px 10px;
   color: #aaaaaa;
@@ -690,7 +690,7 @@ End CSS structure reset Bootstrap
   width: 181px;
 }
 .search .form-search .form-search-controls .select-categories:after {
-  content: "";
+  content: "Ã¯â€žâ€¡";
   font-family: "FontAwesome";
   font-size: 13px;
   line-height: 42px;
@@ -872,7 +872,7 @@ End CSS structure reset Bootstrap
 /*BEGIN-CSS:MENU NAVIGATION
 ==================================================================================================================*/
 .navigation-menu {
-  background-color: #dc9a49;
+  background-color: #e49645;
   height: 53px;
   margin-bottom: 10px;
   width: 100%;
@@ -1078,7 +1078,8 @@ End CSS structure reset Bootstrap
 }
 .single-item-header img {
   width: 250px;
-  height: 300px;
+  height: 280px;
+  border-radius: 15px;
 }
 .container-main{
   margin: 0px 50px;
@@ -1350,58 +1351,9 @@ End CSS structure reset Bootstrap
 .footer {
   margin-top: 15px;
   background-color: #3C3F44;
-  padding: 20px 0;
+  padding: 30px 0;
 }
-.footer .footer-box h3 {
-  border-bottom: 2px solid #ffffff;
-  margin-bottom: 25px;
-  color: #ffffff;
-  padding-bottom: 15px;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-.footer .footer-box h3 span {
-  padding-bottom: 13px;
-  border-bottom: 2px solid #eb5858;
-}
-.footer .footer-box ul li {
-  color: #aaaaaa;
-  margin-left: 10px;
-  list-style: disc;
-}
-.footer .footer-box ul li a {
-  padding: 10px 0 10px 10px;
-  display: block;
-}
-.footer .footer-box .box-address-content {
-  line-height: 30px;
-  color: #aaaaaa;
-}
-.footer .footer-box.box-social .fb-like-box {
-  margin-bottom: 10px;
-  border-bottom: 1px dotted #54585f;
-}
-.footer .footer-box.box-social .social-icon ul li {
-  list-style: none;
-  float: left;
-  margin-left: 0;
-  margin-right: 10px;
-}
-.footer .footer-box.box-social .social-icon ul li a {
-  background-color: #eb5858;
-  border-radius: 3px;
-  color: #ffffff;
-  font-size: 20px;
-  height: 40px;
-  line-height: 35px;
-  padding: 10px;
-  text-align: center;
-  width: 40px;
-}
-.footer .footer-box.box-social .social-icon ul li a:hover {
-  background-color: #ffffff;
-  color: #eb5858;
-}
+
 /*END-CSS:FOOTER
 ==================================================================================================================*/
 /*START-CSS:BOX STYLE
@@ -1572,7 +1524,7 @@ End CSS structure reset Bootstrap
 .menu-logined ul li a:visited:before,
 .menu-account ul li a:visited:before {
   color: #a0a5ac;
-  content: "";
+  content: "Ã¯â€žÂ";
   font-family: FontAwesome;
   font-size: 14px;
   position: absolute;
@@ -2084,7 +2036,7 @@ End CSS structure reset Bootstrap
 .news-detail .news-other ul li a:before,
 .about-detail .news-other ul li a:before {
   color: #a0a5ac;
-  content: "";
+  content: "Ã¯Æ’Å¡";
   font-family: FontAwesome;
   font-size: 14px;
   position: absolute;

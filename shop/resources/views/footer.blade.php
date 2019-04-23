@@ -1,13 +1,8 @@
-<footer class="footers">
-    <div class="col-md-8 col-sm-6 col-xs-12">
-        <p class="copy-right">Copyright © 2019. All rights reserved. Design by <a href=""> Bích Ngọc </a> </p>
+<footer class="footer" >
+  
+    <div class="">
+      <p style="text-align: center;color: white" class="copy-right">Copyright © 2019. All rights reserved. Design by <a href=""> Bích Ngọc </a> </p>
     </div>
-    <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-            </ul>
-          </div>
+    
+
 </footer>   

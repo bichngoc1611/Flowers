@@ -42,13 +42,13 @@
             @endforeach
 
         </div>
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only"></span>
+        <a class=" carousel-control" href="#myCarousel"  data-slide="prev">
+       
+         
       </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only"></span>
+      <a class=" carousel-control" href="#myCarousel"  data-slide="next">
+        
+         
       </a>
   </div>    
 </div>                      

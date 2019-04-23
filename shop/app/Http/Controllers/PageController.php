@@ -75,14 +75,13 @@ class PageController extends Controller
 			$oldCart = Session('cart')?Session::get('cart'):null;
 			$cart = new Cart ($oldCart);
 			if($req->sl >0){
-			for ($i = 0; $i<$req->sl;$i++) {
-				
-			$cart->add($product,$id);
-			}	
-		}else{
-			$cart->add($product,$id);
-		}
-			
+				for ($i = 0; $i<$req->sl;$i++) {
+
+					$cart->add($product,$id);
+				}	
+			}else{
+				$cart->add($product,$id);
+			}			
 			
 			$req->session()->put('cart',$cart);
 			return redirect()->back();
@@ -141,10 +140,10 @@ class PageController extends Controller
 		}
 
 		$product_cart = $cart->items;
-		$data = ['name'=>$req->full_name,'email'=>$req->email, 'address'=>$req->address, 'phone_number'=>$req->phone,'product'=>$cart->totalPrice];
+		$data = ['name'=>$req->full_name,'email'=>$req->email, 'address'=>$req->address, 'phone_number'=>$req->phone,'product'=>$product_cart, 'totalPrice'=> $cart->totalPrice,];
 		Mail::send('mail',$data,function($msg){
 			$msg->from('taynesflowers123@gmail.com','taynesflowers');
-			$msg->to(Input::get('email'),'$req->full_name')->subject('taynesflowers');
+			$msg->to(Input::get('email'),'tôi')->subject('taynesflowers');
 		});
 
 

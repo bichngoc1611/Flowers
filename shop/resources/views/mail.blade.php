@@ -8,7 +8,7 @@
             <p> Số ĐT: {{$phone_number}} </p>
            
         </div>
-         <table  >
+         <table border="1" >
                 <thead >
                     <tr>
                         <th style="color: red;"> ID sản phẩm </th>
@@ -22,16 +22,16 @@
 
                     @foreach($product as $pr)
                     <tr>
-                        <td> {{$pr[i'tem']['id']}} </td>
+                        <td> {{$pr['item']['id']}} </td>
                         <td> {{$pr['item']['name']}} </td>
-                        <td> {{$pr['quantity']}} </td>
-                        <td> {{number_format($pr['item']['price'])}} </td> 
-                        <td> {{number_format($pr['item']['promotion_price'])}} </td> 
+                        <td> {{$pr['qty']}} </td>
+                        <td> {{number_format($pr['item']['unit_price'])}} VND </td> 
+                        <td> {{number_format($pr['item']['promotion_price'])}} VND</td> 
                     </tr>
                     @endforeach
                     <tr>
                         <th colspan="3" > 
-                            <div class="d-flex justify-content-start"> Tổng tiền: {{number_format($totalPrice)}}  </div> 
+                            <div class="d-flex justify-content-start"> Tổng tiền: {{number_format($totalPrice)}} VND </div> 
                         </th>
                         <td> 
                             <div class="text-danger"> </div>
